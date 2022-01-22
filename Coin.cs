@@ -7,6 +7,6 @@ public class Coin : MonoBehaviour
         // Make sure collision occurs with Player
         if (!other.gameObject.CompareTag("Player")) return;
         
-        EventManager.OnCoinCollected();
+        EventManager.OnCoinCollected(transform.position);
     }
 }
