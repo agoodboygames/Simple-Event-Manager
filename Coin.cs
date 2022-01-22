@@ -7,8 +7,6 @@ public class Coin : MonoBehaviour
         // Make sure collision occurs with Player
         if (!other.gameObject.CompareTag("Player")) return;
         
-        other.gameObject.GetComponent<PlayerHandler>().UpdateNumberOfCoins();
-        EventManager.OnCoinCollected(transform.position);
-        Destroy(gameObject);
+        EventManager.OnCoinCollected();
     }
 }
